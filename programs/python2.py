@@ -32,7 +32,11 @@ import random
 
 
 def one(string):
-    return
+    str1=""
+    for n in range(len(string)):
+        str1 = str1+(string[n]*3)
+
+    return str1
 
     # <QUESTION 2>
 
@@ -51,8 +55,14 @@ def one(string):
 
 
 def two(num):
-    return
-
+    for n in range(2, num):
+        if (num % n == 0):
+            return False
+        else:
+            return True
+    
+print(two(20))
+print(two(73))
     # <QUESTION 3>
 
     # Write a function which takes an integer input, a, and returns the sum a+aa+aaa+aaaa.
@@ -69,7 +79,14 @@ def two(num):
 
 
 def three(a):
-    return
+    result = 0
+    for i in range(4):
+        result = result + a*i
+        print(str(a*i))
+    return result
+
+
+print(three(4))
 
     # <QUESTION 4>
 
@@ -99,7 +116,10 @@ def three(a):
 
 
 def four(string1, string2):
-    return
+    combined = ""
+    for letter in range(len(string1)):
+        combined = combined + string1[letter] +string2[letter]
+    return combined
 
     # <QUESTION 5>
 
@@ -117,7 +137,13 @@ def four(string1, string2):
 
 
 def five():
-    return
+    starting =[]
+    for i in range (100, 201):
+        if i % 2 == 0 :
+            starting = starting + [i]
+    list_ = random.sample(list(starting), 5)
+    return list_
+print(five())
 
     # <QUESTION 6>
 
@@ -137,7 +163,11 @@ def five():
 
 
 def six(string):
-    return
+    word = string.casefold()
+    if word.endswith('py'):
+        return True
+
+    return False
 
     # <QUESTION 7>
 
@@ -162,7 +192,12 @@ def six(string):
 
 
 def seven(a, b, c):
-    return
+    nrs =[a,b,c]
+    nrs.sort()
+    if (nrs[2]-nrs[1] == nrs[1]-nrs[0]):
+        return True
+    else :
+        return False
 
     # <QUESTION 8>
 
@@ -180,8 +215,13 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 
-def eight(string, num):
-    return
+def eight(string, n):
+
+    for i in range(n):
+        str1 = string
+        middle = len(str1)//2
+        str1 = str1[:middle] + str1[middle +1]
+    return str1
 
     # <QUESTION 9>
 
